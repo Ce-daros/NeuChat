@@ -5,6 +5,9 @@
 /bin
 /dist
 
+/.tmp
+/.vscode
+
 # Neutralinojs client (minified)
 neutralino.js
 
