@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8" />
+		<title>NeutralinoJs sample app</title>
+		<link rel="stylesheet" href="bs/bootstrap.min.css" />
+		<script src="bs/bootstrap.bundle.min.js"></script>
+		<link rel="stylesheet" href="bs/bootstrap-icons.min.css" />
+		<link rel="stylesheet" href="styles.css" />
+		<script src="js/neutralino.js"></script>
+		<script src="js/lightue.min.js"></script>
+		<script src="js/main.js"></script>
+		<script src="js/jquery-3.7.1.min.js"></script>
+		<script>
+			$(document).ready(function () {
+				$("#mainTab .nav-link").on("click", function (e) {
+					e.preventDefault();
+					$(this).tab("show");
+				});
+			});
+		</script>
+	</head>
+
+	<body data-bs-theme="dark" class="flex-row d-flex">
+		<script src="js/api-util/util.js"></script>
+		<div
+			class="nav-tabs flex-column d-flex lefttop-menu"
+			id="mainTab"
+			role="tablist"
+		>
+			<div class="nav-item">
+				<div
+					class="nav-link active"
+					id="home-tab"
+					data-toggle="tab"
+					href="#home"
+					role="tab"
+					aria-controls="chat"
+					aria-selected="true"
+				>
+					<i class="bi bi-speedometer"></i>
+				</div>
+			</div>
+			<div class="nav-item">
+				<div
+					class="nav-link"
+					id="chat-tab"
+					data-toggle="tab"
+					href="#chat"
+					role="tab"
+					aria-controls="chat"
+					aria-selected="true"
+				>
+					<i class="bi bi-chat-left-text"></i>
+				</div>
+			</div>
+			<div class="nav-item">
+				<div
+					class="nav-link"
+					id="box-tab"
+					data-toggle="tab"
+					href="#box"
+					role="tab"
+					aria-controls="box"
+					aria-selected="false"
+				>
+					<i class="bi bi-box-seam"></i>
+				</div>
+			</div>
+			<div class="nav-item">
+				<div
+					class="nav-link"
+					id="gear-tab"
+					data-toggle="tab"
+					href="#gear"
+					role="tab"
+					aria-controls="gear"
+					aria-selected="false"
+				>
+					<i class="bi bi-gear"></i>
+				</div>
+			</div>
+			<div class="nav-item">
+				<div
+					class="nav-link"
+					id="bookmarks-tab"
+					data-toggle="tab"
+					href="#bookmarks"
+					role="tab"
+					aria-controls="bookmarks"
+					aria-selected="false"
+				>
+					<i class="bi bi-bookmarks"></i>
+				</div>
+			</div>
+			<div class="nav-item">
+				<div
+					class="nav-link"
+					id="people-tab"
+					data-toggle="tab"
+					href="#people"
+					role="tab"
+					aria-controls="people"
+					aria-selected="false"
+				>
+					<i class="bi bi-people"></i>
+				</div>
+			</div>
+		</div>
+		<div class="tab-content" id="myTabContent">
+			<div
+				class="tab-pane fade active show"
+				id="home"
+				role="tabpanel"
+				aria-labelledby="home-tab"
+			>
+				<div class="home-container d-flex flex-column">
+					<div class="home-title">要做些什么？</div>
+					<div class="home-desc1">
+						使用 <b>NeuChat</b> 运行几千种先进的大语言模型，
+					</div>
+					<div class="home-desc2">所有过程都在您的设备上。</div>
+					<div class="home-entries d-flex flex-row">
+						<div class="home-entry d-flex flex-row">
+							<i class="bi bi-box-arrow-in-down-right"></i>
+							<div class="home-entry-txt">开始和 <b>Neu</b> 聊天</div>
+						</div>
+						<div class="home-entry d-flex flex-row">
+							<i class="bi bi-box-arrow-in-down-right"></i>
+							<div class="home-entry-txt">只是玩玩 Prompt 游戏？</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div
+				class="tab-pane fade"
+				id="chat"
+				role="tabpanel"
+				aria-labelledby="chat-tab"
+			>
+				chat
+			</div>
+			<div
+				class="tab-pane fade"
+				id="box"
+				role="tabpanel"
+				aria-labelledby="box-tab"
+			>
+				playground
+			</div>
+			<div
+				class="tab-pane fade"
+				id="gear"
+				role="tabpanel"
+				aria-labelledby="gear-tab"
+			>
+				setting
+			</div>
+			<div
+				class="tab-pane fade"
+				id="bookmarks"
+				role="tabpanel"
+				aria-labelledby="bookmarks-tab"
+			>
+				bookmark
+			</div>
+			<div
+				class="tab-pane fade"
+				id="people"
+				role="tabpanel"
+				aria-labelledby="people-tab"
+			>
+				characters
+			</div>
+		</div>
+		<div class="line-1"></div>
+		<div class="line-1b"></div>
+		<div class="line-2"></div>
+		<div class="line-3">
+			<div class="right-setting">
+				设置
+			</div>
+		</div>
+		<div class="pattern-1"></div>
+		<div class="pattern-1a" onclick="changeSettingPanel()"></div>
+		
+		<div class="change-lightmode">
+			<svg
+				xmlns="http://www.w3.org/2000/svg"
+				width="32"
+				height="32"
+				fill="currentColor"
+				class="bi bi-mask change-lightmode-i"
+				viewBox="0 0 16 16"
+			>
+				<path
+					d="M6.2,0.9C9,2.2,10.7,5,10.7,8c0,3-1.8,5.8-4.5,7.1c3.9,1,8-1.3,9-5.3s-1.3-8-5.3-9C8.7,0.6,7.4,0.6,6.2,0.9z M4.2,1
+	C8.1-1.1,12.9,0.3,15,4.2s0.7,8.7-3.2,10.8C7.9,17.1,3.1,15.7,1,11.8S0.3,3.1,4.2,1L4.2,1z"
+				/>
+			</svg>
+		</div>
+		<div class="line-1a"></div>
+	</body>
+</html>
