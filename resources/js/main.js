@@ -31,11 +31,15 @@ Neutralino.events.on("spawnedProcess", (evt) => {
 });
 
 function changeSettingPanel() {
-	var a = document.querySelector("body > div.line-3");
-
-	if (a) {
-		a.classList.toggle("panel-out");
-		
-		
+	    var a = document.querySelector("body > div.line-3");
+	    if (a) {
+	        if (a.classList.contains("panel-out")) {
+	            a.classList.remove("panel-out");
+	            a.classList.add("panel-in");
+	        } else {
+	            a.classList.remove("panel-in");
+	            a.classList.add("panel-out");
+	        }
+	    }
 	}
-}
+	
