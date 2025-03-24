@@ -4,6 +4,7 @@ html {
     margin: 0;
     box-sizing: border-box;
     text-overflow: clip;
+    
 }
 
 body {
@@ -12,11 +13,13 @@ body {
     text-overflow: clip;
     overflow: hidden;
 }
-
+div {
+    font-weight: lighter !important;
+}
 .home-title {
     font-size: xx-large;
     margin-top: 10%;
-    font-weight: bold;
+    font-weight: bold !important;
     font-family: "思源黑体 CN";
 }
 
@@ -69,14 +72,14 @@ body {
 }
 
 b {
-    font-weight: bolder !important;
+    font-weight: bold !important;
 }
 
 .home-desc1,
 .home-desc2 {
     font-size: large;
-    font-weight: light;
     font-family: "思源黑体 CN";
+    font-weight: lighter;
 }
 
 .tab-content {
@@ -208,7 +211,7 @@ b {
 @keyframes popup-1 {
     0% {
         width: 10%;
-        left: 88%;
+        left: 100%;
         top: -25px;
         height: 50%;
     }
@@ -271,7 +274,7 @@ b {
 
 .panel-crashed {
     width: 10%;
-    left: 88%;
+    left: 100%;
     top: -25px;
     height: 50%;
     transition: all 0.5s ease;
@@ -280,7 +283,7 @@ b {
 .line-3 {
     position: absolute;
     width: 10%;
-    left: 88%;
+    left: 100%;
     top: -25px;
     height: 50%;
     border: 1px solid;
@@ -316,14 +319,14 @@ b {
 
     90% {
         width: 10%;
-        left: 88%;
+        left: 100%;
         top: -25px;
         height: 50%;
     }
 
     100% {
         width: 10%;
-        left: 88%;
+        left: 100%;
         top: -25px;
         height: 50%;
     }
